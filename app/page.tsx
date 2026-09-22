@@ -9,4 +9,5 @@ import Resume from "@/components/Resume";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AssistantWidget from "@/components/assistant/AssistantWidget";
-export default function Home() { return <><Navbar /><main><Hero /><FeaturedProjects /><Experience /><Research /><About /><Skills /><Resume /><Contact /></main><Footer /><AssistantWidget /></>; }
+import { AssistantProvider } from "@/components/assistant/AssistantContext";
+export default function Home() { return <AssistantProvider><Navbar /><main><Hero /><FeaturedProjects /><Experience /><Research /><About /><Skills /><Resume /><Contact /></main><Footer /><AssistantWidget /></AssistantProvider>; }
