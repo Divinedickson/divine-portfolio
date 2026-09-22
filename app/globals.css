@@ -2,6 +2,7 @@
 :root { --ink: #131b2e; --muted: #52617a; --blue: #2563eb; --violet: #4b41e1; --line: #e2e8f0; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 8rem; }
 body { margin: 0; color: var(--ink); background: #faf8ff; font-family: Inter, Arial, Helvetica, sans-serif; }
 ::selection { background: #d9e4ff; }
 a { text-decoration: none; }

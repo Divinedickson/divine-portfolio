@@ -1,3 +1,31 @@
 import Link from "next/link";
-const nav = [{ label: "Work", href: "#work" }, { label: "Experience", href: "#experience" }, { label: "Research", href: "#research" }, { label: "About", href: "#about" }];
-export default function Navbar() { return <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur"><div className="container-wide flex min-h-18 items-center justify-between gap-5"><Link href="#top" aria-label="Divine Dickson-Uwakwe, back to top" className="flex items-center gap-3 font-bold tracking-tight"><span className="grid size-9 place-items-center rounded-lg bg-blue-600 text-sm font-extrabold text-white">DD</span><span className="hidden sm:inline">Divine Dickson-Uwakwe<span className="text-blue-600">.</span></span><span className="sm:hidden">Divine.</span></Link><nav aria-label="Main navigation" className="hidden items-center gap-7 md:flex">{nav.map(item => <Link key={item.href} className="text-sm font-semibold text-slate-600 transition hover:text-blue-600" href={item.href}>{item.label}</Link>)}</nav><Link href="#contact" className="button-secondary !min-h-10 !px-4 !py-2 text-sm">Get in touch <span aria-hidden="true">↗</span></Link></div><nav aria-label="Mobile navigation" className="container-wide flex gap-5 overflow-x-auto pb-3 md:hidden">{nav.map(item => <Link key={item.href} className="whitespace-nowrap text-xs font-semibold text-slate-600" href={item.href}>{item.label}</Link>)}</nav></header>; }
+
+const nav = [
+  { label: "Home", href: "#top" },
+  { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "Research", href: "#research" },
+  { label: "About", href: "#about" },
+  { label: "Resume", href: "#resume" },
+];
+
+export default function Navbar() {
+  return (
+    <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur">
+      <div className="container-wide flex min-h-18 items-center justify-between gap-5">
+        <Link href="#top" aria-label="Divine Dickson-Uwakwe, back to top" className="flex items-center gap-3 font-bold tracking-tight">
+          <span className="grid size-9 place-items-center rounded-lg bg-blue-600 text-sm font-extrabold text-white">DD</span>
+          <span className="hidden sm:inline">Divine Dickson-Uwakwe<span className="text-blue-600">.</span></span>
+          <span className="sm:hidden">Divine.</span>
+        </Link>
+        <nav aria-label="Main navigation" className="hidden items-center gap-5 lg:flex">
+          {nav.map((item) => <Link key={item.href} className="text-sm font-semibold text-slate-600 transition hover:text-blue-600" href={item.href}>{item.label}</Link>)}
+        </nav>
+        <Link href="#contact" className="button-secondary !min-h-10 !px-4 !py-2 text-sm">Get in touch <span aria-hidden="true">↗</span></Link>
+      </div>
+      <nav aria-label="Mobile navigation" className="container-wide flex gap-5 overflow-x-auto pb-3 lg:hidden">
+        {nav.map((item) => <Link key={item.href} className="whitespace-nowrap text-xs font-semibold text-slate-600" href={item.href}>{item.label}</Link>)}
+      </nav>
+    </header>
+  );
+}

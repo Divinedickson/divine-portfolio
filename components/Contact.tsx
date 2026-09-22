@@ -1,2 +1,22 @@
-import { links } from "@/data/links";
-export default function Contact() { return <section id="contact" className="bg-[#16284e] py-18 text-white"><div className="container-wide"><p className="eyebrow !text-blue-300 mb-4">Let’s connect</p><h2 className="section-heading max-w-xl">Have something in mind?</h2><p className="mt-5 max-w-xl leading-7 text-blue-100/80">I’m interested in meaningful software engineering, applied AI, and research opportunities.</p>{links.email ? <a href={`mailto:${links.email}`} className="button-secondary mt-7">Email Divine ↗</a> : <p className="mt-7 text-sm text-blue-200">Contact details coming soon.</p>}</div></section>; }
+import { contactLinks } from "@/data/links";
+
+export default function Contact() {
+  return (
+    <section id="contact" className="bg-[#faf8ff] py-18 sm:py-24">
+      <div className="container-wide">
+        <div className="surface mx-auto max-w-4xl rounded-xl px-6 py-12 text-center sm:px-10 sm:py-16">
+          <p className="eyebrow mb-4">Next steps</p>
+          <h2 className="section-heading">Let&apos;s build something meaningful.</h2>
+          <p className="mx-auto mt-5 max-w-2xl leading-7 text-slate-600">I’m interested in software engineering, applied AI, and research opportunities. Reach out if you’d like to connect.</p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            {contactLinks.map((item, index) => item.href ? (
+              <a key={item.label} href={item.href} className={index === 0 ? "button-primary" : "button-secondary"} target={index === 0 ? undefined : "_blank"} rel={index === 0 ? undefined : "noopener noreferrer"}>{item.label} <span aria-hidden="true">↗</span></a>
+            ) : (
+              <span key={item.label} className="button-secondary cursor-not-allowed text-slate-400" title={`${item.label} destination coming soon`}>{item.label} · Soon</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
