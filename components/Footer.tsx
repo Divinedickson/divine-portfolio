@@ -1,0 +1,1 @@
+export default function Footer() { return <footer className="bg-[#101e3b] py-7 text-blue-100/70"><div className="container-wide flex flex-wrap justify-between gap-3 text-xs"><span>© {new Date().getFullYear()} Divine Dickson-Uwakwe</span><a href="#top" className="hover:text-white">Back to top ↑</a></div></footer>; }

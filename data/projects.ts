@@ -1,0 +1,6 @@
+export type Project = { slug: string; number: string; title: string; type: string; description: string; technologies: string[]; links: { demo?: string; github?: string; caseStudy?: string } };
+export const projects: Project[] = [
+  { slug: "academic-research-assistant", number: "01", title: "Academic Research Assistant", type: "Flagship · Applied AI", description: "A RAG-based academic research platform for uploading papers, organizing documents, and asking questions grounded in the literature with source citations.", technologies: ["React", "TypeScript", "Django", "PostgreSQL", "pgvector", "ONNX Runtime", "Sentence Transformers", "LLM API"], links: {} },
+  { slug: "plant-disease-detector", number: "02", title: "Plant Disease Detector", type: "Computer Vision", description: "A deep-learning application that classifies plant diseases from leaf images through a responsive web interface.", technologies: ["PyTorch", "React", "Django", "Computer Vision"], links: {} },
+  { slug: "category-learning", number: "03", title: "Human vs Neural Network Category Learning", type: "Ongoing Research", description: "Investigating how increasing label noise affects category-learning accuracy and generalization in college students compared with neural networks.", technologies: ["Category Learning", "Label Noise", "Human–AI Comparison"], links: {} },
+];

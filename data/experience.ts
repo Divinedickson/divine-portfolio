@@ -1,0 +1,1 @@
+export const experience = [{ role: "Student Webmaster", organization: "William Paterson University", highlights: ["University web development", "Reusable templates and responsive interfaces", "Accessibility, frontend performance, and collaboration with university departments"], metrics: {} }];

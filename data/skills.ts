@@ -1,0 +1,1 @@
+export const skills = { Programming: ["Python", "TypeScript", "JavaScript", "Java", "SQL"], Frontend: ["React", "Next.js", "HTML", "CSS"], Backend: ["Django", "REST APIs", "PostgreSQL"], "AI / ML": ["PyTorch", "scikit-learn", "NumPy", "RAG", "Embeddings", "Vector search"], Tools: ["Git", "GitHub", "Docker", "Vercel", "Render"] };

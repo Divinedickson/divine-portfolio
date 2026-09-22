@@ -1,0 +1,2 @@
+import { links } from "@/data/links";
+export default function Resume() { return <section id="resume" className="py-16"><div className="container-wide"><p className="eyebrow mb-3">Background</p><h2 className="section-heading">Resume<span className="text-blue-600">.</span></h2>{links.resume ? <a href={links.resume} className="button-primary mt-6">View Resume ↗</a> : <p className="mt-4 text-slate-600">Resume link coming soon.</p>}</div></section>; }
