@@ -11,12 +11,10 @@ export default function Resume() {
               <p className="eyebrow mb-2">Background & experience</p>
               <h2 className="text-2xl font-bold tracking-tight">Resume</h2>
               <p className="mt-2 max-w-lg leading-7 text-slate-600">A concise overview of my education, experience, projects, and technical skills.</p>
-              <p className="mt-2 text-xs text-slate-500">Resume PDF will be added at {links.resume}.</p>
             </div>
           </div>
           <div className="flex flex-wrap gap-3 lg:shrink-0">
-            <a href={links.resume} target="_blank" rel="noopener noreferrer" className="button-secondary">View Resume <span aria-hidden="true">↗</span></a>
-            <a href={links.resume} download="Divine-Dickson-Uwakwe-Resume.pdf" className="button-primary">Download Resume <span aria-hidden="true">↓</span></a>
+            <a href={links.resume} target="_blank" rel="noopener noreferrer" className="button-primary">View Resume <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </div>

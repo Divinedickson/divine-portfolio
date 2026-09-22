@@ -1,0 +1,5 @@
+type Step = { title: string; detail: string };
+
+export default function ArchitectureDiagram({ steps, label }: { steps: Step[]; label: string }) {
+  return <figure className="surface rounded-xl p-5 sm:p-8"><figcaption className="mb-7 text-xs font-bold uppercase tracking-[.15em] text-slate-500">{label}</figcaption><ol className="mx-auto max-w-3xl">{steps.map((step, index) => <li key={`${step.title}-${index}`} className="flex gap-4 sm:gap-5"><div className="flex flex-col items-center"><span className="grid size-9 shrink-0 place-items-center rounded-lg bg-blue-100 font-mono text-xs font-bold text-blue-700">{String(index + 1).padStart(2, "0")}</span>{index < steps.length - 1 && <span aria-hidden="true" className="my-1 h-full min-h-5 w-px bg-blue-200" />}</div><div className="mb-4 min-w-0 flex-1 rounded-lg border border-slate-200 bg-slate-50 p-4 sm:p-5"><h3 className="font-bold tracking-tight">{step.title}</h3><p className="mt-1 text-sm leading-6 text-slate-600">{step.detail}</p></div></li>)}</ol></figure>;
+}
