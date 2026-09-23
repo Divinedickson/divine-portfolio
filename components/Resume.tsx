@@ -1,4 +1,5 @@
 import { links } from "@/data/links";
+import { FileText } from "lucide-react";
 
 export default function Resume() {
   return (
@@ -6,7 +7,7 @@ export default function Resume() {
       <div className="container-wide">
         <div className="surface flex flex-col gap-7 rounded-xl p-6 sm:p-9 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex items-start gap-4">
-            <span className="grid size-12 shrink-0 place-items-center rounded-lg bg-blue-100 text-2xl text-blue-700" aria-hidden="true">▤</span>
+            <span className="grid size-12 shrink-0 place-items-center rounded-lg bg-blue-100 text-blue-700" aria-hidden="true"><FileText size={24} /></span>
             <div>
               <p className="eyebrow mb-2">Background & experience</p>
               <h2 className="text-2xl font-bold tracking-tight">Resume</h2>
@@ -14,7 +15,7 @@ export default function Resume() {
             </div>
           </div>
           <div className="flex flex-wrap gap-3 lg:shrink-0">
-            <a href={links.resume} target="_blank" rel="noopener noreferrer" className="button-primary">View Resume <span aria-hidden="true">↗</span></a>
+            <a href={links.resume} target="_blank" rel="noopener noreferrer" className="button-primary">View Resume <FileText aria-hidden="true" size={18} /></a>
           </div>
         </div>
       </div>

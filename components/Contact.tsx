@@ -1,4 +1,5 @@
 import { contactLinks } from "@/data/links";
+import { ArrowUpRight, Mail } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -10,7 +11,7 @@ export default function Contact() {
           <p className="mx-auto mt-5 max-w-2xl leading-7 text-slate-600">I’m interested in software engineering, applied AI, and research opportunities. Reach out if you’d like to connect.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {contactLinks.map((item, index) => item.href ? (
-              <a key={item.label} href={item.href} className={index === 0 ? "button-primary" : "button-secondary"} target={index === 0 ? undefined : "_blank"} rel={index === 0 ? undefined : "noopener noreferrer"}>{item.label} <span aria-hidden="true">↗</span></a>
+              <a key={item.label} href={item.href} className={index === 0 ? "button-primary" : "button-secondary"} target={index === 0 ? undefined : "_blank"} rel={index === 0 ? undefined : "noopener noreferrer"}>{item.label}{index === 0 ? <Mail aria-hidden="true" size={18} /> : <ArrowUpRight aria-hidden="true" size={18} />}</a>
             ) : (
               <span key={item.label} className="button-secondary cursor-not-allowed text-slate-400" title={`${item.label} destination coming soon`}>{item.label} · Soon</span>
             ))}

@@ -1,4 +1,5 @@
 import type { RefObject } from "react";
+import { X } from "lucide-react";
 import AssistantMark from "./AssistantMark";
 
 type Props = {
@@ -17,7 +18,7 @@ export default function ChatButton({ onClick, open, buttonRef, hintVisible, onHi
           <button type="button" onClick={onClick} className="min-h-11 flex-1 px-3 py-2 text-left text-sm font-semibold leading-5 text-slate-700">
             Have a question? Ask my portfolio AI.
           </button>
-          <button type="button" onClick={onHintDismiss} aria-label="Dismiss assistant suggestion" className="grid size-11 shrink-0 place-items-center rounded-md text-lg text-slate-500 hover:bg-slate-100 hover:text-slate-800">×</button>
+          <button type="button" onClick={onHintDismiss} aria-label="Dismiss assistant suggestion" className="grid size-11 shrink-0 place-items-center rounded-md text-slate-500 transition hover:bg-slate-100 hover:text-slate-800"><X aria-hidden="true" size={19} /></button>
         </div>
       )}
       <button

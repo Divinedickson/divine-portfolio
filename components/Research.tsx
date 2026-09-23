@@ -1,4 +1,5 @@
 import { research } from "@/data/research";
+import { GitCompareArrows } from "lucide-react";
 
 export default function Research() {
   return (
@@ -23,7 +24,7 @@ export default function Research() {
           ))}
         </div>
         <div className="surface mt-5 flex flex-col gap-4 rounded-xl p-6 sm:flex-row sm:items-center sm:p-8">
-          <div className="grid size-11 shrink-0 place-items-center rounded-lg bg-blue-100 text-xl text-blue-700" aria-hidden="true">↔</div>
+          <div className="grid size-11 shrink-0 place-items-center rounded-lg bg-blue-100 text-blue-700" aria-hidden="true"><GitCompareArrows size={22} /></div>
           <div><h4 className="font-bold">Human and neural-network comparison</h4><p className="mt-1 leading-7 text-slate-600">{research.comparison}</p></div>
         </div>
       </div>

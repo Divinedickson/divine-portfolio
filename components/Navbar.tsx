@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const nav = [
   { label: "Home", href: "/#top" },
@@ -11,7 +12,7 @@ const nav = [
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur">
+    <header className="site-header sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur">
       <div className="container-wide flex min-h-18 items-center justify-between gap-5">
         <Link href="/#top" aria-label="Divine Dickson-Uwakwe, back to top" className="flex items-center gap-3 font-bold tracking-tight">
           <span className="grid size-9 place-items-center rounded-lg bg-blue-600 text-sm font-extrabold text-white">DD</span>
@@ -21,10 +22,10 @@ export default function Navbar() {
         <nav aria-label="Main navigation" className="hidden items-center gap-5 lg:flex">
           {nav.map((item) => <Link key={item.href} className="text-sm font-semibold text-slate-600 transition hover:text-blue-600" href={item.href}>{item.label}</Link>)}
         </nav>
-        <Link href="/#contact" className="button-secondary !min-h-10 !px-4 !py-2 text-sm">Get in touch <span aria-hidden="true">↗</span></Link>
+        <Link href="/#contact" className="button-secondary !min-h-11 !px-3 !py-2 text-sm sm:!px-4">Get in touch <ArrowRight aria-hidden="true" size={17} /></Link>
       </div>
-      <nav aria-label="Mobile navigation" className="container-wide flex gap-5 overflow-x-auto pb-3 lg:hidden">
-        {nav.map((item) => <Link key={item.href} className="whitespace-nowrap text-xs font-semibold text-slate-600" href={item.href}>{item.label}</Link>)}
+      <nav aria-label="Mobile navigation" className="mobile-nav container-wide flex gap-1 overflow-x-auto pb-2 lg:hidden">
+        {nav.map((item) => <Link key={item.href} className="inline-flex min-h-11 shrink-0 items-center rounded-md px-2 text-xs font-semibold text-slate-600 transition hover:bg-blue-50 hover:text-blue-700" href={item.href}>{item.label}</Link>)}
       </nav>
     </header>
   );
