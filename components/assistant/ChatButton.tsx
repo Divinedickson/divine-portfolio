@@ -12,7 +12,7 @@ type Props = {
 
 export default function ChatButton({ onClick, open, buttonRef, hintVisible, onHintDismiss }: Props) {
   return (
-    <div className="assistant-launcher-wrap">
+    <div className="assistant-launcher-wrap" hidden={open}>
       {hintVisible && (
         <div className="assistant-discovery-hint" aria-live="polite">
           <button type="button" onClick={onClick} className="min-h-11 flex-1 px-3 py-2 text-left text-sm font-semibold leading-5 text-slate-700">

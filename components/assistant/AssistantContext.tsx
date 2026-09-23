@@ -21,7 +21,7 @@ export function AssistantProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const closeAssistant = useCallback(() => setOpen(false), []);
-  const restoreTriggerFocus = useCallback(() => triggerRef.current?.focus(), []);
+  const restoreTriggerFocus = useCallback(() => triggerRef.current?.focus({ preventScroll: true }), []);
 
   return <AssistantContext.Provider value={{ open, openAssistant, closeAssistant, restoreTriggerFocus }}>{children}</AssistantContext.Provider>;
 }

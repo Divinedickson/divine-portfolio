@@ -13,11 +13,11 @@ function ActionLink({ action }: { action: ChatAction }) {
 export default function ChatMessage({ message }: { message: ChatMessageType }) {
   const fromUser = message.role === "user";
   return (
-    <li className={`flex items-end gap-2 ${fromUser ? "justify-end" : "justify-start"}`}>
-      {!fromUser && <AssistantMark size="sm" />}
-      <div className={`min-w-0 max-w-[86%] rounded-lg px-3.5 py-3 text-sm leading-6 shadow-sm min-[360px]:px-4 sm:max-w-[84%] ${fromUser ? "rounded-br-sm bg-blue-600 text-white" : "rounded-bl-sm border border-slate-200 bg-white text-slate-700"}`}>
+    <li className={`flex w-full min-w-0 items-start gap-2 ${fromUser ? "justify-end" : "justify-start"}`}>
+      {!fromUser && <AssistantMark size="xs" className="mt-1 md:size-8 md:text-[11px]" />}
+      <div className={`min-w-0 rounded-lg px-3.5 py-3 text-sm leading-6 shadow-sm min-[360px]:px-4 md:max-w-[84%] ${fromUser ? "max-w-[92%] rounded-br-sm bg-blue-600 text-white" : "max-w-[calc(100%_-_2.25rem)] rounded-bl-sm border border-slate-200 bg-white text-slate-700"}`}>
         <span className="sr-only">{fromUser ? "You" : "Portfolio assistant"}: </span>
-        <p className="whitespace-pre-wrap break-words [overflow-wrap:anywhere]">{message.content}</p>
+        <p className="whitespace-pre-wrap break-words [overflow-wrap:anywhere] [word-break:break-word]">{message.content}</p>
         {message.actions && message.actions.length > 0 && <div className="mt-3 flex flex-wrap gap-2">{message.actions.map((action) => <ActionLink key={`${action.type}-${action.href}`} action={action} />)}</div>}
       </div>
     </li>
