@@ -28,7 +28,7 @@ export default function ChatButton({ onClick, open, buttonRef, hintVisible, onHi
         aria-haspopup="dialog"
         aria-controls="portfolio-assistant"
         aria-expanded={open}
-        className="assistant-launcher inline-flex min-h-13 items-center gap-2.5 rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-blue-950/20 transition hover:bg-blue-700"
+        className="assistant-launcher inline-flex min-h-13 items-center gap-2.5 rounded-md bg-blue-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-blue-700"
       >
         <AssistantMark size="sm" className="bg-blue-800 ring-white/25" />
         Ask about Divine

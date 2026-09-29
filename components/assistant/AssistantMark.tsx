@@ -13,7 +13,7 @@ export default function AssistantMark({ size = "sm", className = "" }: Props) {
   return (
     <span
       aria-hidden="true"
-      className={`grid shrink-0 place-items-center bg-blue-600 font-extrabold tracking-[-.04em] text-white shadow-sm ring-1 ring-blue-700/20 ${sizeClasses[size]} ${className}`}
+      className={`grid shrink-0 place-items-center bg-blue-600 font-extrabold tracking-[-.04em] text-white ring-1 ring-blue-700/20 ${sizeClasses[size]} ${className}`}
     >
       DD
     </span>

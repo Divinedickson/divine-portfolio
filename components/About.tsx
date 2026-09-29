@@ -7,11 +7,11 @@ export default function About() {
         <p className="eyebrow mb-4">Background & interests</p>
         <h2 className="section-heading">About Me<span className="text-blue-600">.</span></h2>
         <div className="mt-10 grid gap-5 lg:grid-cols-[1.2fr_.8fr]">
-          <article className="surface rounded-xl p-6 sm:p-8">
+          <article className="surface rounded-lg p-6 sm:p-8">
             <div className="flex items-center gap-4"><span aria-hidden="true" className="grid size-12 place-items-center rounded-lg bg-blue-600 font-extrabold text-white">DD</span><div><h3 className="text-lg font-bold">{profile.name}</h3><p className="text-sm font-semibold text-blue-700">Computer Science student</p></div></div>
             <p className="mt-6 max-w-2xl leading-7 text-slate-600">{profile.summary} I’m interested in building useful systems and understanding how people and models learn from data.</p>
           </article>
-          <article className="rounded-xl border border-blue-100 bg-[#f2f5ff] p-6 sm:p-8">
+          <article className="rounded-lg border border-blue-100 bg-slate-50 p-6 sm:p-8">
             <p className="eyebrow mb-5">Education</p>
             <h3 className="text-xl font-bold tracking-tight">{profile.education.degree}</h3>
             <p className="mt-2 font-semibold text-blue-700">{profile.education.institution}</p>

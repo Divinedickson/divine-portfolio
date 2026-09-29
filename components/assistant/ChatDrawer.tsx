@@ -93,7 +93,7 @@ export default function ChatDrawer({ open, onClose, onClosed, messages, input, o
       aria-describedby="assistant-subtitle"
       onCancel={(event) => { event.preventDefault(); onClose(); }}
       onClose={onClosed}
-      className="assistant-dialog overflow-hidden border-0 bg-[#f7f9ff] p-0 text-slate-900 shadow-2xl"
+      className="assistant-dialog overflow-hidden border-0 bg-[#f7f9ff] p-0 text-slate-900 shadow-xl"
     >
       <div className="assistant-shell">
         <header className="assistant-header flex min-w-0 items-center justify-between gap-3 border-b border-slate-200 bg-white px-3 pb-3 min-[360px]:px-4 md:px-5 md:py-4">

@@ -9,14 +9,10 @@ export default function Experience() {
         <p className="mt-4 max-w-2xl leading-7 text-slate-600">Building and maintaining useful, accessible web experiences in an institutional setting.</p>
         <div className="mt-10 space-y-5">
           {experience.map((item) => (
-            <article key={`${item.role}-${item.organization}`} className="surface rounded-xl p-6 sm:p-9">
-              <div className="flex flex-wrap items-start gap-4 sm:gap-5">
-                <div aria-hidden="true" className="grid size-11 shrink-0 place-items-center rounded-lg bg-blue-100 font-bold text-blue-700">WP</div>
-                <div className="min-w-0 flex-1">
-                  <h3 className="text-xl font-bold tracking-tight sm:text-2xl">{item.role}</h3>
-                  <p className="mt-1 font-semibold text-blue-700">{item.organization}</p>
-                </div>
-                <span className="rounded-md bg-blue-50 px-3 py-1.5 text-xs font-semibold text-blue-700">Web development</span>
+            <article key={`${item.role}-${item.organization}`} className="surface rounded-lg p-6 sm:p-9">
+              <div>
+                <h3 className="text-xl font-bold tracking-tight sm:text-2xl">{item.role}</h3>
+                <p className="mt-1 font-semibold text-blue-700">{item.organization}</p>
               </div>
               <p className="mt-6 max-w-3xl leading-7 text-slate-600">{item.summary}</p>
               <h4 className="mt-8 text-xs font-bold uppercase tracking-[.14em] text-slate-500">Areas of contribution</h4>

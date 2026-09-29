@@ -3,9 +3,9 @@ import { FileText } from "lucide-react";
 
 export default function Resume() {
   return (
-    <section id="resume" className="bg-[#f2f4ff] py-18 sm:py-24">
+    <section id="resume" className="bg-slate-50 py-18 sm:py-24">
       <div className="container-wide">
-        <div className="surface flex flex-col gap-7 rounded-xl p-6 sm:p-9 lg:flex-row lg:items-center lg:justify-between">
+        <div className="surface flex flex-col gap-7 rounded-lg p-6 sm:p-9 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex items-start gap-4">
             <span className="grid size-12 shrink-0 place-items-center rounded-lg bg-blue-100 text-blue-700" aria-hidden="true"><FileText size={24} /></span>
             <div>

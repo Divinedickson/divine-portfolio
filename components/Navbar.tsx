@@ -12,7 +12,7 @@ const nav = [
 
 export default function Navbar() {
   return (
-    <header className="site-header sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur">
+    <header className="site-header sticky top-0 z-40 border-b border-slate-200 bg-white">
       <div className="container-wide flex min-h-18 items-center justify-between gap-5">
         <Link href="/#top" aria-label="Divine Dickson-Uwakwe, back to top" className="flex items-center gap-3 font-bold tracking-tight">
           <span className="grid size-9 place-items-center rounded-lg bg-blue-600 text-sm font-extrabold text-white">DD</span>
